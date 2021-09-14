@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>综合应用：线性表和树</title>
+        <link rel="stylesheet" href="./sources/css/main.css" type="text/css">
+    </head>
+    <body>
+        <div id="tree-canvas">
+            <div class="default-text">
+                <h1>综合应用：线性表和树</h1>
+                <h2>1953080 田宇</h2>
+            </div>
+        </div>
+        <div id="sidebar">
+            <h1>综合应用<br/>线性表和树</h1>
+            <div id="tools">
+                <h2>控制台</h2>
+                <section id="tools-init">
+                    <div title="初始化方式">
+                        <button id="btn-init-empty" onclick="btnTreeInit()">初始化空树</button>
+                        <button id="btn-init-random" onclick="btnTreeInit(true)">生成随机线性表初始化树</button>
+                    </div>
+                </section>
+                <section id="tools-edit">
+                    <div title="操作的结点id">
+                        请输入要操作的结点id：<input id="input-id" type="number" min="0" placeholder="请输入结点id">
+                    </div>
+                    <!-- <h3>以下输入仅在插入时有效</h3> -->
+                    <div title="插入的数据值">
+                        请输入要插入的结点的值：<input id="input-data" placeholder="请输入结点数据">
+                    </div>
+                    <div title="添加/修改/删除">
+                        <button id="btn-edit-add" class="tri" onclick="btnTreeInsert()" disabled>添加</button>
+                        <button id="btn-edit-modify" class="tri special" onclick="btnTreeModify()" disabled>修改</button>
+                        <button id="btn-edit-del" class="tri" onclick="btnTreeDelete()" disabled>删除</button>
+                    </div>
+                    注意：第一次添加时默认插入根节点
+                </section>
+                <section id="tools-show">
+					<div title="展示操作记录">
+						<div class="title">操作记录</div>
+						<textarea id="text-operations" readonly placeholder="这里将展示操作序列"></textarea>
+					</div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <script async src="./sources/js/viz.min.js"></script>
+            <script async src="./sources/js/svg-pan-zoom.min.js"></script>
+            <script defer src="./sources/js/linearTable.js"></script>
+            <script defer src="./sources/js/tree.js"></script>
+            <script defer src="./sources/js/main.js"></script>
+        </footer>
+    </body>
+</html>
